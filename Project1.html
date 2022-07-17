@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 1: Cars</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+			
+			.column {
+			  float: left;
+			  width: 33.33%;
+			  padding: 5px;
+			}
+			
+			/* Clearfix (clear floats) */
+			.row::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+			.fun{
+				float: left;
+			  width: 50%;
+			  padding: 5px;
+			}
+			</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Sierra Whonder</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Sierra Whonder</a></li>
+							<li><a href="generic.html">Generic Page</a></li>
+							<li class="active"><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://github.com/sierrawho/Sierra_Whonder_Portfolio.git" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Car Purchase Prediction</h1>
+								</header>
+
+								<!-- Text stuff -->
+									<h2>Analysis</h2>
+									
+
+
+									<h3>For Code</h3> 
+									<p><span class="image left"><img src="images/datapreview.png" alt="" /></span>This project is for the purpose of gaining more practice using python, predictions, and machine learning. This dataset is about car purchases, and I was given the following information, User ID, Gender, Age, Annual Salary, and whether they purchased a vehicle or not. Firstly, I wanted to explore the data to get a better understanding with the variable to make an assumption.  </p>
+									<br>
+									<br>
+									<br>
+									<H2>Theory</H2>
+									<div class="row">
+										<div class="fun">
+										  <img src="images/describe().png" alt="Snow" style="width:100%">
+										</div>
+										<div class="fun">
+										  <img src="images/Info().png" alt="Forest" style="width:100%">
+										</div>
+									  </div>
+									  <p>Based off the information that I have observed, I believe the purchases will be influenced by key factors such as Age and Salary. With I continued to manipulate the data by cleaning it up.  </p>
+
+									  <ul>
+										<li>Converted the values from string to integers (to use values in decision tree)</li>
+										<li>Remove any duplicates (no need for redundant values)/li>
+										<li>Remove irrelevant columns </li>
+									  </ul>  
+								
+									
+									<div class="row">
+										<div class="column">
+										  <img src="images/GENDERVSpurch.png" alt="Snow" style="width:100%">
+										</div>
+										<div class="column">
+										  <img src="images/Salaryvspurch.png" alt="Forest" style="width:100%">
+										</div>
+										<div class="column">
+										  <img src="images/age range and purchase.png" alt="Mountains" style="width:100%">
+										</div>
+									  </div>
+									  <h6>Explanation will go from left to right</h6>
+
+									  <p> a) This graph represents the males and females that either made or did not make a purchase of a vehicle. According to this bar graph, women and men who have not purchased are relatively equal, thus giving the projection that the gender of the customers might not matter as much as I thought. On the contrary the graph shows that women made more purchases than men (again this does not mean much as the gender is an irrelevant variable). </p>
+									  <br>
+									  <p>b) This graph is a representation of the amount of people who have purchased (I removed the non-buyers as I don’t believe they are necessary to have in the bar chart) and the salary that they currently have. In relation to this model, there are buyers that make $100K-149K in a calendar year and that they could be more likely to purchase than those who make 10K-99K and 150K-199K</p>
+									  <br>
+									  <p>c) This graph is displaying the age range of the customers who have purchased a car and at first glance it seems as though those who are between the ages of 30-59 are more likely to by a vehicle over those who are between the ages of 18-29 and 60+</p>
+									
+									
+									<img src="images/CorrNum.png" alt="" style="width: 100%; float: inline;">
+									<p><span class="image left"><img src="images/CORRmap.png" alt="" /></span>Now I want to see want to see which factor is influencing the decision of the potential buyers, thus, I wanted to find the relationship by using a correlation method.  Immediately, the outcome of the model displayed that the User ID and the Gender has little to no relationship making them (as I suspected)  unrelated to the impact on the decision, However, the Annual Salary and Age have more of a positive relationship meaning the older one is or the more one makes, is more likely to make the decision to make a purchase of a vehicle. </p>
+									<p><span class="image left"><img src="images/predictnum.png" alt="" /></span>Once the Gender & User Id columns were removed and the dataframe was cleaned up, This analysis must be taken further by creating a test and train dataset to develop a prediction model. </p>
+									<img src="images/Mydtrees.png" alt="" style="width: 100%;">
+									
+									<p> This decision tree was made by using three of the most important columns (Y is Purchased) (X is the range of Age and Salary). The decision to use the range opposed to the original values was a strategic one, as if every individual value was used, it can produce an unreadable decision tree with multiple paths for every single value. In short, with these result we can see those who are most likely to make a car purchase. </p>
+									<hr />
+
+								<!-- Preformatted Code -->
+									<!-- <h2>For the code click the link</h2>
+									<pre><code>i = 0;
+										
+
+										
+
+
+										..............
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+
+	Car.shape -->
+
+<!-- import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+import matplotlib.image as pltimg
+import numpy as np
+
+
+%matplotlib inline
+
+Car=pd.read_csv('car_data.csv')
+Car
+
+
+
+
+} -->
+<!-- <img src="" alt="">
+</code></pre> -->
+
+							<!-- </section>
+
+					</div> -->
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<!-- <section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section> -->
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(647) 325-6103</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:sierra.whonder7@gmail.com">Sierra.Whonder7@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									
+									<li><a href="https://www.linkedin.com/in/sierra-whonder-6b5b7110a
+										" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/sierrawho/Sierra_Whonder_Portfolio.git" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
